@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>스쿠리 주요 기능</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #121212;
+            color: white;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #0F1115;
+            padding: 50px 80px;
+            box-sizing: border-box;
+        }
+        
+        /* Custom Accent Color */
+        .text-brand { color: #00C853; }
+        .bg-brand { background-color: #00C853; }
+        .border-brand { border-color: #00C853; }
+        
+        /* Card Styling */
+        .feature-card {
+            background-color: #1A1C20;
+            border: 1px solid #2d2d2d;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background-color: rgba(0, 200, 83, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #00C853;
+            font-size: 1.4rem;
+        }
+
+        /* Abstract Background - Simulating gradients without using gradient syntax */
+        .glow-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 200, 83, 0.08);
+            filter: blur(80px);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .glow-1 {
+            width: 500px;
+            height: 500px;
+            top: -200px;
+            right: -100px;
+        }
+        .glow-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            left: -100px;
+        }
+
+        /* Typography Override */
+        h2 {
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        p {
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body style="">
+<div class="slide-container">
+<!-- Background Glow Effects -->
+<div class="glow-circle glow-1"></div>
+<div class="glow-circle glow-2"></div>
+<!-- Header Section -->
+<div class="flex flex-col mb-10 z-10">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-8 h-1.5 bg-brand rounded-full"></div>
+<p class="text-gray-400 font-bold tracking-wider text-sm">SKURI FEATURES</p>
+</div>
+<h2 class="text-4xl font-extrabold text-white">
+                대학 생활을 더 스마트하게,<br>
+<span class="text-brand">6가지 핵심 기능</span>
+</h2>
+</div>
+<!-- Grid Section -->
+<div class="grid grid-cols-3 gap-6 z-10 flex-1">
+<!-- Feature 1: 공지사항 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-bell"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">학교 공지 실시간 알림</h3>
+<p class="text-gray-400 text-sm leading-relaxed">학교 홈페이지에 올라오는 중요한 공지사항을 일일이 찾아보기 힘드셨죠? 스쿠리에서는 학교 공지사항이 올라오면 실시간으로 알림을 보내줍니다.</p>
+</div>
+<!-- Feature 2: 택시 동승 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-taxi"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">택시 동승파티 매칭</h3>
+<p class="text-gray-400 text-sm leading-relaxed">등교길에 혼자 택시를 타셨나요?&nbsp;<span style="font-size: 0.875rem;">목적지가 같은 학우들과 동승해서 택시비를 절약해보세요.&nbsp;</span></p><p class="text-gray-400 text-sm leading-relaxed">4명이 동승하면 버스 요금보다 저렴하다는 사실!</p>
+</div>
+<!-- Feature 3: 학사일정 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-calendar-check"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">학사일정 자동 알림</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    수강신청, 장학금 신청일 등 중요한 학사일정을 
+                    캘린더로 한눈에 확인하고, 기한이 다가오면 
+                    미리 알림을 받아 대비할 수 있습니다.
+                </p>
+</div>
+<!-- Feature 4: 학식정보 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-utensils"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">오늘의 학식 정보</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    '오늘 점심 뭐 먹지?' 고민 끝! 
+                    교내 식당별 메뉴와 가격 정보를 
+                    앱에서 간편하게 모아볼 수 있습니다.
+                </p>
+</div>
+<!-- Feature 5: 자유게시판 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-comments"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">익명 커뮤니티</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    성결대생만의 자유로운 소통 공간. 
+                    익명 또는 닉네임으로 학교 생활 꿀팁과 
+                    고민을 솔직하게 나눌 수 있습니다.
+                </p>
+</div>
+<!-- Feature 6: 채팅 -->
+<div class="feature-card">
+<div class="icon-box">
+<i class="fas fa-comment-dots"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">실시간 채팅</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                    동승 파티원과의 1:1 대화부터 그룹 채팅까지. 
+                    계좌번호 공유 및 정산 보조 기능으로 
+                    복잡한 계산도 손쉽게 해결합니다.
+                </p>
+</div>
+</div>
+</div>
+
+</body></html>
