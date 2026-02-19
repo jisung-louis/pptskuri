@@ -150,11 +150,11 @@
     #slide1 .badge-text { color: white; font-weight: bold; font-size: .9rem; text-align: center; }
     #slide1 .skuri-line {
       display: inline-flex;
-      align-items: end;
+      align-items: center;
       gap: 14px;
     }
     #slide1 .logo-img {
-      width: 52px; height: 52px;
+      width: 48px; height: 48px;
       flex-shrink: 0;
     }
 
@@ -268,9 +268,29 @@
     }
     #slide3 .store-btn:hover { background-color: #374151; border-color: #00C853; }
     #slide3 .cta-box {
-      background-color: #1A1C20;
-      border-left: 4px solid #00C853;
-      padding: 20px; border-radius: 8px; margin-bottom: 30px;
+      position: relative;
+      padding: 24px 28px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      background: rgba(0, 200, 83, 0.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 200, 83, 0.18);
+      box-shadow: 0 0 20px rgba(0, 200, 83, 0.08), inset 0 1px 0 rgba(255,255,255,0.04);
+      overflow: hidden;
+    }
+    #slide3 .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #00C853, #69F0AE, #00C853);
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
     }
     /* ====== MOBILE RESPONSIVE ====== */
     @media (max-width: 768px) {
@@ -322,7 +342,7 @@
       #slide3 h1, #slide3 .text-4xl { font-size: 1.8rem; }
       #slide3 .benefit-list { margin: 24px 0; gap: 16px; }
       #slide3 .benefit-item p.text-lg { font-size: 1rem; }
-      #slide3 .cta-box { padding: 16px; margin-bottom: 20px; }
+      #slide3 .cta-box { padding: 18px 20px; margin-bottom: 20px; border-radius: 14px; }
       #slide3 .mockup-container {
         height: 360px;
         margin-top: 32px;
@@ -374,7 +394,8 @@
         </h1>
         <p class="description">
           공지 확인부터 택시 동승, 학사 일정, 커뮤니티까지.<br>
-          성결대생을 위한 모든 기능을 하나의 앱에 담았습니다.
+          성결대생을 위한 모든 기능을 하나의 앱에 담았습니다.<br>
+          성결대 졸업생이 만들었어요!
         </p>
         <div class="feature-list">
           <div class="feature-item"><i class="fas fa-check-circle feature-icon"></i><span>중요한 학교 공지 실시간 알림</span></div>
@@ -434,7 +455,7 @@
       <div class="feature-card">
         <div class="icon-box"><i class="fas fa-taxi"></i></div>
         <h3 class="text-xl font-bold mb-2">택시 동승파티 매칭</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">등교길에 혼자 택시를 타셨나요? 목적지가 같은 학우들과 동승해서 택시비를 절약해보세요. 4명이 동승하면 버스 요금보다 저렴하다는 사실!</p>
+        <p class="text-gray-400 text-sm leading-relaxed">등교길에 혼자 택시를 타셨나요? 목적지가 같은 학우들과 동승해서 택시비를 절약해보세요. <br>4명이 동승하면 버스 요금보다 저렴하다는 사실!</p>
       </div>
       <div class="feature-card">
         <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
@@ -444,7 +465,7 @@
       <div class="feature-card">
         <div class="icon-box"><i class="fas fa-utensils"></i></div>
         <h3 class="text-xl font-bold mb-2">오늘의 학식 정보</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">'오늘 점심 뭐 먹지?' 고민 끝! 교내 식당별 메뉴와 가격 정보를 앱에서 간편하게 모아볼 수 있습니다.</p>
+        <p class="text-gray-400 text-sm leading-relaxed">'오늘 점심 뭐 먹지?' 고민 끝! 이번주 학생식당 메뉴를 간편하게 모아볼 수 있습니다.</p>
       </div>
       <div class="feature-card">
         <div class="icon-box"><i class="fas fa-comments"></i></div>
@@ -452,9 +473,9 @@
         <p class="text-gray-400 text-sm leading-relaxed">성결대생만의 자유로운 소통 공간. 익명 또는 닉네임으로 학교 생활 꿀팁과 고민을 솔직하게 나눌 수 있습니다.</p>
       </div>
       <div class="feature-card">
-        <div class="icon-box"><i class="fas fa-comment-dots"></i></div>
-        <h3 class="text-xl font-bold mb-2">실시간 채팅</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">동승 파티원과의 1:1 대화부터 그룹 채팅까지. 계좌번호 공유 및 정산 보조 기능으로 복잡한 계산도 손쉽게 해결합니다.</p>
+        <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
+        <h3 class="text-xl font-bold mb-2">학생회 행사 실시간 안내 <span class="text-xs text-gray-500 font-normal">(예정)</span></h3>
+        <p class="text-gray-400 text-sm leading-relaxed">영암체전(성결대 축제), 보궐선거, 격려행사 현황 등 학생회 행사 정보를 실시간으로 안내받을 수 있습니다. 일정·장소·참여 현황을 한눈에 확인하세요.</p>
       </div>
     </div>
   </div>
@@ -474,8 +495,11 @@
         <h1 class="text-4xl font-black mb-4 leading-tight">스쿠리와 함께하는</h1>
         <h1 class="text-4xl font-black mb-4 leading-tight"><span class="text-white">완벽한 성결대 캠퍼스 라이프</span></h1>
         <div class="cta-box">
-          <p class="text-gray-300 text-sm mb-1">지금 설치하고 바로 시작하세요!</p>
-          <p class="text-white font-bold">성결대 이메일(@sungkyul.ac.kr)로 간편 로그인</p>
+          <div class="flex items-center gap-3 mb-2">
+            <i class="fas fa-rocket text-lg" style="color:#69F0AE;"></i>
+            <p class="text-white font-bold text-base" style="margin:0;">지금 설치하고 바로 시작하세요!</p>
+          </div>
+          <p class="text-gray-400 text-sm" style="margin:0; padding-left:32px;">성결대 이메일(<span style="color:#69F0AE; font-weight:600;">@sungkyul.ac.kr</span>)로 간편 로그인</p>
         </div>
         <div class="benefit-list">
           <div class="benefit-item">
