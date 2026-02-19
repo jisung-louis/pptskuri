@@ -88,7 +88,7 @@
     }
     #slide1 h1 {
       font-size: 3.5rem; font-weight: 900;
-      line-height: 1.1; margin-bottom: 1.5rem;
+      line-height: 1.35; margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
     }
     #slide1 .subtitle {
@@ -272,6 +272,75 @@
       border-left: 4px solid #00C853;
       padding: 20px; border-radius: 8px; margin-bottom: 30px;
     }
+    /* ====== MOBILE RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      /* -- Global -- */
+      html { scroll-snap-type: none; }
+      .slide-section { height: auto; min-height: 100vh; overflow: visible; }
+      .nav-dots { display: none; }
+
+      /* -- Slide 1 -- */
+      #slide1 .content-wrapper {
+        flex-direction: column;
+        padding: 40px 24px;
+        justify-content: center;
+      }
+      #slide1 .text-content {
+        max-width: 100%;
+        text-align: center;
+      }
+      #slide1 h1 { font-size: 2.2rem; }
+      #slide1 .subtitle {
+        font-size: 1.1rem;
+        justify-content: center;
+      }
+      #slide1 .description { font-size: 0.95rem; }
+      #slide1 .feature-list { align-items: center; }
+      #slide1 .feature-item { font-size: 0.95rem; }
+      #slide1 .visual-content { margin-top: 32px; }
+      #slide1 .phone-mockup {
+        width: 220px; height: 440px;
+        transform: none;
+      }
+      #slide1 .phone-mockup:hover { transform: none; }
+      #slide1 .badge { display: none; }
+      #slide1 .logo-img { width: 40px; height: 40px; }
+      #slide1 .mt-8 { justify-content: center; flex-wrap: wrap; }
+
+      /* -- Slide 2 -- */
+      #slide2 .slide-container { padding: 32px 20px; }
+      #slide2 h2 { font-size: 1.6rem; }
+      #slide2 .grid { grid-template-columns: 1fr !important; }
+      #slide2 .feature-card { height: auto; padding: 20px; }
+
+      /* -- Slide 3 -- */
+      #slide3 .content-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+        align-items: start;
+      }
+      #slide3 h1, #slide3 .text-4xl { font-size: 1.8rem; }
+      #slide3 .benefit-list { margin: 24px 0; gap: 16px; }
+      #slide3 .benefit-item p.text-lg { font-size: 1rem; }
+      #slide3 .cta-box { padding: 16px; margin-bottom: 20px; }
+      #slide3 .mockup-container {
+        height: 360px;
+        margin-top: 32px;
+      }
+      #slide3 .phone {
+        width: 160px; height: 330px;
+        border-radius: 24px; border-width: 4px;
+      }
+      #slide3 .phone-left {
+        transform: translateX(-80px) translateZ(-50px) rotateY(15deg) scale(.85);
+      }
+      #slide3 .phone-right {
+        transform: translateX(80px) translateZ(-50px) rotateY(-15deg) scale(.85);
+      }
+      #slide3 .phone-notch { width: 50px; height: 12px; }
+      #slide3 .store-btn { padding: 8px 14px; }
+      #slide3 .flex.gap-4.mt-4 { flex-wrap: wrap; justify-content: center; }
+    }
   </style>
 </head>
 <body>
@@ -314,14 +383,14 @@
           <div class="feature-item"><i class="fas fa-check-circle feature-icon"></i><span>자유로운 익명 커뮤니티 &amp; 채팅</span></div>
         </div>
         <div class="mt-8 flex gap-4">
-          <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 flex items-center">
+          <a href="https://play.google.com/store/apps/details?id=com.jisung.sktaxi&hl=ko" target="_blank" rel="noopener" class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 flex items-center no-underline">
             <i class="fab fa-android text-2xl mr-3 text-green-400"></i>
             <div class="text-xs text-gray-400">Available on<br><span class="text-white font-bold text-sm">Google Play</span></div>
-          </div>
-          <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 flex items-center">
+          </a>
+          <a href="https://apps.apple.com/kr/app/%EC%8A%A4%EC%BF%A0%EB%A6%AC-skuri/id6754636203" target="_blank" rel="noopener" class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 flex items-center no-underline">
             <i class="fab fa-apple text-2xl mr-3 text-white"></i>
             <div class="text-xs text-gray-400">Download on the<br><span class="text-white font-bold text-sm">App Store</span></div>
-          </div>
+          </a>
         </div>
       </div>
       <!-- Right: Phone -->
@@ -423,14 +492,14 @@
           </div>
         </div>
         <div class="flex gap-4 mt-4">
-          <button class="store-btn">
+          <a href="https://play.google.com/store/apps/details?id=com.jisung.sktaxi&hl=ko" target="_blank" rel="noopener" class="store-btn no-underline">
             <i class="fab fa-google-play text-2xl mr-3 text-gray-200"></i>
             <div class="text-left"><div class="text-xs text-gray-400">GET IT ON</div><div class="text-white font-bold text-sm">Google Play</div></div>
-          </button>
-          <button class="store-btn">
+          </a>
+          <a href="https://apps.apple.com/kr/app/%EC%8A%A4%EC%BF%A0%EB%A6%AC-skuri/id6754636203" target="_blank" rel="noopener" class="store-btn no-underline">
             <i class="fab fa-apple text-2xl mr-3 text-gray-200"></i>
             <div class="text-left"><div class="text-xs text-gray-400">Download on the</div><div class="text-white font-bold text-sm">App Store</div></div>
-          </button>
+          </a>
         </div>
       </div>
       <!-- Right: Phone Mockups -->
